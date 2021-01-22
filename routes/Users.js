@@ -1,9 +1,17 @@
 const express = require("express");
-const router=express.Router();
+const router = express.Router();
 
-//Importing Model
-const User=require('../models/Users.js')
+const { getAllUsers,addNewUser,deleteUser,getOneUser,updateUser } = require("../controllers/Users.js");
 
-// router.get('/',)
+//Defined Routes
+router.get("/", getAllUsers);
 
-module.exports=router;
+router.post("/add",addNewUser)
+
+router.delete("/:id",deleteUser)
+
+router.get("/:id",getOneUser)
+
+router.put("/:id",updateUser)
+
+module.exports = router;

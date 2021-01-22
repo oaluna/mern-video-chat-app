@@ -7,7 +7,7 @@ import { urls } from '../../config/urls'
 
 const Chat=(props)=>{
 const [id, setUserId] = useState(null)
-const [rooms, setRooms] = useState([1, 2])
+const [rooms, setRooms] = useState([])
 
   const getRoomsList = async (id) => {
   const roomslist = await getData(urls.rooms.getUserRooms, { id: id });

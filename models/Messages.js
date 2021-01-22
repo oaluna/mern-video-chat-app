@@ -7,16 +7,16 @@ const MessagesSchema = new Schema(
       type: String,
       required: true,
     },
-//    status: {
-//      type: Number,
-//      default: 0,
-//    },
-username: {
-  type: String,
-  required: true
-}
-//    sender: { type: Schema.Types.ObjectId, ref: "users", required: true },
-//    receiver: { type: Schema.Types.ObjectId, ref: "users", required: true },
+    // status: {
+    //   type: Number,
+    //   default: 0,
+    // },
+    username:{
+      type:String,
+      required:true
+    }
+    // sender: { type: Schema.Types.ObjectId, ref: "users", required: true },
+    // receiver: { type: Schema.Types.ObjectId, ref: "users", required: true },
   },
   { timestamps: true }
 );

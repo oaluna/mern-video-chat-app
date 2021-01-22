@@ -8,9 +8,13 @@ const GroupMessageSchema = new Schema(
       type: String,
       required: true,
     },
+    sendername:{
+      type:String,
+      required:true
+    },
     group: { type: Schema.Types.ObjectId, ref: "groups", required: true },
   },
   { timestamps: true }
 );
 
-module.exports = Group = mongoose.model("group_messages", GroupMessageSchema);
+module.exports = GroupMessages = mongoose.model("group_messages", GroupMessageSchema);

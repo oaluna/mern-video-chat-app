@@ -1,0 +1,7 @@
+{
+  "name": "mern-videochat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Oscar Luna <CaporalesLuna@gmail.com>",
+  "license": "MIT"
+}

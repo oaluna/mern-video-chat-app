@@ -16,14 +16,16 @@ app.use(express.static(__dirname + '/public'));
 //Importing Routes
 const users = require('./routes/Users');
 const messages = require('./routes/Messages');
-const { isObject } = require('util');
+
+// const groups = require("")
 //App Routes
 app.get('/', (req, res) => {
   res.send('Welcome to Chat Application');
 });
 
 app.use('/api/users', users);
-app.use('/api/chats', messages);
+app.use("/api/chats", messages);
+// app.use("/api/rooms",messages)
 
 const io = socketIo(server);
 

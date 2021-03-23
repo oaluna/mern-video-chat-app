@@ -1,0 +1,147 @@
+.video-contact {
+    position: fixed;
+    width: 300px;
+    height: auto;
+    left: 20px;
+    top: 100px;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.call-window #peerVideo {
+    height: auto;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.video-user {
+    position: fixed;
+    overflow: hidden;
+    height: 60px;
+    width: auto;
+    right: 60px;
+    top: 7px;
+    border-radius: 0px;
+}
+
+.video-user #localVideo {
+    height: 100%;
+    width: auto;
+    max-width: 9.375rem;
+    border-radius: 6px;
+    border: 3px solid #fff;
+}
+
+.video-control {
+    position: absolute;
+    bottom: 92px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: fade-out 4s;
+    opacity: 0;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.video-control:hover {
+    animation: fade-in 1s;
+    opacity: 1;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.video-control button {
+    color: white;
+}
+
+button.fa-video,
+button.fa-microphone {
+    background-color: rgb(76, 175, 80);
+}
+
+button.hangup {
+    background-color: rgb(244, 67, 54);
+}
+
+.call-modal .btn-action,
+.video-control .btn-action {
+    height: 40px;
+    width: 40px;
+    line-height: 10px;
+    margin: 0 8px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: .25s;
+}
+
+.btn-action:focus {
+    outline: none;
+    border: none;
+}
+
+.video-contact:hover .max-mark {
+    display: block;
+}
+
+.toggle-contact-video {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(23, 35, 34, .75);
+    cursor: pointer;
+}
+
+.toggle-contact-video:hover {
+    background-color: rgba(14, 226, 208, 0.75);
+}
+
+.toggle-contact-video img {
+    width: 100%;
+    height: 100%;
+}
+
+.max-mark {
+    top: 3px;
+    right: 3px;
+    display: none;
+}
+
+.min-mark {
+    bottom: 5px;
+    left: 0px;
+}
+
+.max-video {
+    opacity: 1;
+}
+
+.min-video {
+    opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .video-user {
+        right: 47px;
+    }
+}
